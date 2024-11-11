@@ -2,4 +2,23 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <androidx.glance.layout.Column
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <androidx.glance.text.Text
+            android:text="¿A donde quieres dirigirte?"
+            android:padding="12dp"/>
+
+        <androidx.glance.layout.Row
+            android:gravity="center">
+            <androidx.glance.Button
+                android:text="Página Principal"
+                android:onClick="actionStartActivity(MainActivity::class.java)" />
+        </androidx.glance.layout.Row>
+
+    </androidx.glance.layout.Column>
+
 </FrameLayout>

@@ -21,7 +21,6 @@ import androidx.glance.text.Text
 class SimpleWidgetContent : GlanceAppWidget() {
 
     override suspend fun provideGlance(context: Context, id: GlanceId) {
-
         provideContent {
             GlanceTheme {
                 MyContent()
@@ -37,13 +36,18 @@ class SimpleWidgetContent : GlanceAppWidget() {
             verticalAlignment = Alignment.Top,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Text(text = "¿A donde quieres dirigirte?", modifier = GlanceModifier.padding(12.dp))
-            Row(horizontalAlignment = Alignment.CenterHorizontally) {
+            Text(
+                text = "¿A dónde quieres dirigirte?",
+                modifier = GlanceModifier.padding(16.dp) // Más padding para asegurar visibilidad
+            )
+            Row(
+                horizontalAlignment = Alignment.CenterHorizontally,
+                modifier = GlanceModifier.padding(top = 16.dp) // Más espacio entre elementos
+            ) {
                 Button(
                     text = "Página Principal",
                     onClick = actionStartActivity<MainActivity>()
                 )
-
             }
         }
     }
