@@ -38,15 +38,19 @@ class SimpleWidgetContent : GlanceAppWidget() {
         ) {
             Text(
                 text = "¿A dónde quieres dirigirte?",
-                modifier = GlanceModifier.padding(16.dp) // Más padding para asegurar visibilidad
+                modifier = GlanceModifier.padding(16.dp) // Padding para asegurar visibilidad
             )
             Row(
                 horizontalAlignment = Alignment.CenterHorizontally,
-                modifier = GlanceModifier.padding(top = 16.dp) // Más espacio entre elementos
+                modifier = GlanceModifier.padding(top = 16.dp) // Espacio entre elementos
             ) {
                 Button(
                     text = "Página Principal",
                     onClick = actionStartActivity<MainActivity>()
+                )
+                Button(
+                    text = "Lista de Productos",
+                    onClick = actionStartActivity<ListaProductos>()
                 )
             }
         }

@@ -24,6 +24,7 @@
                 android:resource="@xml/my_app_widget_info" />
         </receiver>
 
+        <!-- Main Activity -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -31,10 +32,15 @@
             android:theme="@style/Theme.Lab14">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- ListaProductos Activity -->
+        <activity
+            android:name=".ListaProductos"
+            android:exported="true"
+            android:label="Lista de Productos" />
     </application>
 
 </manifest>
