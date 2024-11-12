@@ -31,28 +31,35 @@ class SimpleWidgetContent : GlanceAppWidget() {
     @Composable
     private fun MyContent() {
         Column(
-            modifier = GlanceModifier.fillMaxSize()
+            modifier = GlanceModifier
+                .fillMaxSize()
                 .background(GlanceTheme.colors.background),
             verticalAlignment = Alignment.Top,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(
                 text = "¿A dónde quieres dirigirte?",
-                modifier = GlanceModifier.padding(16.dp) // Padding para asegurar visibilidad
+                modifier = GlanceModifier.padding(16.dp)
             )
             Row(
                 horizontalAlignment = Alignment.CenterHorizontally,
-                modifier = GlanceModifier.padding(top = 16.dp) // Espacio entre elementos
+                modifier = GlanceModifier.padding(top = 16.dp)
             ) {
                 Button(
                     text = "Página Principal",
                     onClick = actionStartActivity<MainActivity>()
                 )
+            }
+            Row(
+                horizontalAlignment = Alignment.CenterHorizontally,
+                modifier = GlanceModifier.padding(top = 8.dp)
+            ) {
                 Button(
-                    text = "Lista de Productos",
-                    onClick = actionStartActivity<ListaProductos>()
+                    text = "Estado del Celular",
+                    onClick = actionStartActivity<ListaProductosEstado>()
                 )
             }
         }
     }
 }
+

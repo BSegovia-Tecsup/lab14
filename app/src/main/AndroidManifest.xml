@@ -38,7 +38,7 @@
 
         <!-- ListaProductos Activity -->
         <activity
-            android:name=".ListaProductos"
+            android:name=".ListaProductosEstado"
             android:exported="true"
             android:label="Lista de Productos" />
     </application>
